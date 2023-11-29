@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    width: 485px;
+    margin: 0 auto;
+}
+
+
+
+h1 {
+    font-size: 3em;
+    color: #007d7b;
+    text-transform: uppercase;
+}
+
+nav {
+    width: 100%;
+    background: black;
+    color: white;
+    height: 100px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: #007d7b;
+}
+
+nav a:focus {
+    background-color: #007d7b;
+}
+
+.top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    z-index: 1000;
+    border: solid 1px #007d7b;
+    padding: 20px;
+    background-color: black;
+}
+
+.top a {
+    margin: 20px;
+}
+
+main {
+    padding: 5px;
+}
+
+h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-top: 5px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.25em;
+    text-align: left;
+    margin: 25px 0;
+}
+
+#gallery p {
+    margin-bottom: 10px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px 5px;
+    margin-bottom: 15px;
+}
+
+figure {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+figcaption {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.photo-grid>figure:nth-child(1) figcaption,
+.photo-grid>figure:nth-child(2) figcaption,
+.photo-grid>figure:nth-child(3) figcaption,
+.photo-grid>figure:nth-child(7) figcaption,
+.photo-grid>figure:nth-child(12) figcaption {
+    color: white;
+}
+
+.photo-grid>figure:nth-child(1) figcaption,
+.photo-grid>figure:nth-child(3) figcaption,
+.photo-grid>figure:nth-child(6) figcaption,
+.photo-grid>figure:nth-child(7) figcaption {
+    bottom: 0;
+    top: auto;
+}
+
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+small {
+    text-transform: uppercase;
+}
+
+figcaption,
+label,
+input,
+small {
+    font-size: 1em;
+}
+
+#contact {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+#contact p {
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    margin-bottom: 50px;
+
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 30px;
+}
+
+label {
+    padding-left: 10px;
+    text-transform: uppercase;
+
+
+}
+
+input {
+    width: 100%;
+    text-transform: uppercase;
+    height: 40px;
+    border: 0px;
+
+}
+
+input::placeholder {
+    font-weight: bold;
+    color: #007d7b;
+    padding-left: 10px;
+}
+
+input:focus,
+input:hover {
+    outline: none;
+    border-bottom: 3px solid #007d7b;
+}
+
+button {
+    background-color: #007d7b;
+    color: white;
+    text-transform: uppercase;
+    width: 50%;
+    margin: 40px;
+    height: 40px;
+    border-radius: 15px;
+    border: 0px;
+    font-weight: bold;
+    font-size: 1em;
+
+}
+
+button:hover,
+button:focus {
+    background-color: white;
+    color: #007d7b;
+}
+
+
+@media screen and (min-width: 880px) {
+    body {
+        width: 880px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        width: 1300px;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
